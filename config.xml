@@ -41,6 +41,22 @@
     <plugin name="cordova-plugin-geolocation" />
     <plugin name="cordova-plugin-globalization" /> -->
     <icon src="icon.png" />
+    <!--iPhone Spotlight y el icono Configuración--> <icon src="icon/icon-small.png" gap:platform="ios" width = "29" height = "29" />
+    <!--iOS 6.1--> <!--icono Spotlight--> <icon src="icon/icon-40.png" gap:platform="ios" width = "40" height = "40" />
+    <!--iPad Spotlight y el icono Configuración--> <icon src="icon/icon-50.png" width = "50" height = "50" />
+    <!--iPhone / iPod Touch--> <icon src="icon/icon-57.png" gap:platform="ios" width ="57" height="57" />
+    <!--iPhone Spotlight y el icono Configuración--> <icon src = "icon/icon-small@2x.png" gap:platform="ios" width = "58" height = "58" />
+    <!--iOS 7.0 +--> <!--iPhone / iPod Touch--> <icon src="icon/icon-60.png" gap:platform="ios" width = "60" height = "60" />
+    <!--iPad--> <icon src="icon/icon-72.png" gap:platform="ios" width="72" height="72" />
+    <!-- iPad--> <icon src="icon/icon-76.png" gap:platform="ios" width="76" height="76" />
+    <!--iOS 6.1--> <!--icono Spotlight--> <icon src = "icon/icon-40@2x.png" gap:platform="ios" width = "80" height = "80" />
+    <!--iOS 8.0 +--> <!--iPhone Plus 6--> <icon src = "icon/icon-60@3x.png" gap:platform="ios" width = "180" height = "180" />
+    <!--iPad Spotlight y el icono Configuración--> <icon src = "icon/icon-50@2x.png" gap:platform="ios" width = "100" height = "100" />
+    <!--iPhone / iPod Touch--> <icon src = "icon/icon@2x.png" gap:platform="ios" width ="114" height  = "114" />
+    <!--iOS 7.0 +--> <!--iPhone / iPod Touch--> <icon src = "icon/icon-60@2x.png" gap:platform="ios" width = "120" height = "120" />
+    <!--iPad--> <icon src = "icon/icon-72@2x.png" gap:platform="ios" width = "144" height = "144" />
+    <!--iPad-->  <icon src = "icon/icon-76@2x.png" gap:platform="ios" width = "152" height = "152" />
+    
 
     <access origin="*"/>
 
