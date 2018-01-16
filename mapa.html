@@ -19,7 +19,8 @@
             </div>
             <div class="div6"></div>
         </div>
-         <div id="map" class="mapa"></div>
+        <div id="map" class="mapa"></div>
+        <div class="infomap"><div class="div1"></div></div>
 </body>
 
 </html>
@@ -39,12 +40,19 @@
 
   function initMap() { //FUNCION QUE CARGA EL MAPA CON LA GEOLOCALIZACION ACTUAL
     var marcadores = [
-        ['ARCANGEL <br> Av. Campanario #42 <br> Fracc. Hacienda Campanario', 20.6090593,-100.3766555],
-        ['TLACOTE <br> Carretera a Tlacote 602 <br> Col. Ex Hacienda San Juanico', 20.5891939,-100.4243764],
-        ['LA CURVA <br> Av. Juarez 89 Ote. <br> Col. Centro', 20.3857527,-99.9926849],
-        ['AEROPUERTO <br> Carr. Estatal 100 QRO <br> Higerillas KM 7+450', 20.6091354,-100.162595],
-        ['NORTHM <br> AUTOPISTA MÉXICO - QRO KM 175+60 <br> Pedro Escobedo, El Sauz Bajo', 20.461568,-100.0979912],
-        ['EPIGMENIO <br> Av. Epigmenio Gonzalez 1220 <br> Fracc. Industrial Montaña', 20.6055384,-100.4089717]
+        ['<div class="div4 id="info1"><img style="width: 100%; height: 80%; margin-left: 45%;" src="http://www.mexienergi.com/aplicacion/imgsta/campa.jpg" style=""></div><div class="div4" id="info2"><p style="display: hidden;"></p></div><div class="div2" id="info3"> <p style="font-size: 1em;"> <strong>ARCANGEL</strong> <br> <br> Av. Campanario #42 <br> Fracc. Hacienda Campanario</p></div>', 20.6090593,-100.3766555],
+
+        ['<div class="div4"><img style="width: 100%; height: 80%; margin-left: 45%;" src="http://www.mexienergi.com/aplicacion/imgsta/tlaco.jpg" style=""></div><div class="div4"><p style="display: hidden;"></p></div><div class="div2"> <p style="font-size: 1em;"><strong>TLACOTE</strong> <br> Carretera a Tlacote 602 <br> Col. Ex Hacienda San Juanico', 20.5891939,-100.4243764],
+
+        ['<div class="div4"><img style="width: 100%; height: 80%; margin-left: 45%;" src="http://www.mexienergi.com/aplicacion/imgsta/sjr.jpg" style=""></div><div class="div4"><p style="display: hidden;"></p></div><div class="div2"> <p style="font-size: 1em;"> <strong>MACIAS</strong> <br> Av. Juarez 89 Ote. <br> Col. Centro', 20.3857527,-99.9926849],
+
+        ['<div class="div4"><img style="width: 100%; height: 80%; margin-left: 45%;" src="http://www.mexienergi.com/aplicacion/imgsta/servif.jpg" style=""></div><div class="div4"><p style="display: hidden;"></p></div><div class="div2"> <p style="font-size: 1em;"> <strong>SERVIFIGUES</strong> <br> Constituyentes 1557 <br> Col. Huertas del Carmen, Corregidora, Querétaro</p></div>', 20.538153,-100.4339062],
+
+        ['<div class="div4"><img style="width: 100%; height: 80%; margin-left: 45%;" src="http://www.mexienergi.com/aplicacion/imgsta/aero.jpg" style=""></div><div class="div4"><p style="display: hidden;"></p></div><div class="div2"> <p style="font-size: 1em;"> <strong>AEROPUERTO</strong> <br> <br> Carr. Estatal 100 QRO <br> Higerillas KM 7+450</p></div>', 20.6091354,-100.162595],
+
+        ['<div class="div4"><img style="width: 100%; height: 80%; margin-left: 45%;" src="http://www.mexienergi.com/aplicacion/imgsta/northm.jpg" style=""></div><div class="div4"><p style="display: hidden;"></p></div><div class="div2"> <p style="font-size: 1em;"> <strong>NORTHM</strong> <br> AUTOPISTA MÉXICO - QRO KM 175+60 <br> Pedro Escobedo, El Sauz Bajo </p></div>', 20.461568,-100.0979912],
+
+        ['<div class="div4"><img style="width: 100%; height: 80%; margin-left: 45%;" src="http://www.mexienergi.com/aplicacion/imgsta/epig.jpg" style=""></div><div class="div4"><p style="display: hidden;"></p></div><div class="div2"> <p style="font-size: 1em;"> <strong>EPIGMENIO</strong> <br> Av. Epigmenio Gonzalez 1220 <br> Fracc. Industrial Montaña</p></div>', 20.6055384,-100.4089717]
     ];  
     
     var myLatlng = new google.maps.LatLng(20.5588118,-100.2264654);
@@ -72,8 +80,27 @@
         });
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
-                infowindow.setContent(marcadores[i][0]);
-                infowindow.open(map, marker);
+              if(i == 0){
+                window.alert("estas en campanario");
+              }if(i == 1){
+                window.alert("estas en tlacote");
+              }if(i == 2){
+                window.alert("estas en macias");
+              }if(i == 3){
+                window.alert("estas en servi");
+              }if(i == 4){
+                window.alert("estas en aero");
+              }if(i == 5){
+                window.alert("estas en north");
+              }if(i == 6){
+                window.alert("estas en epgimenio");
+              }
+                /*infowindow.setContent(marcadores[i][0]);
+                infowindow.open(map, marker);*/
+                /*document.querySelector(".infomap").innerHTML += marcadores[i][0];
+                document.querySelector(".infomap").style.display = "block";
+                */
+                /*window.alert(marcadores[i][0]);*/
             }
         })(marker, i));
     }
