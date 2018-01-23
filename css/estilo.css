@@ -276,19 +276,17 @@ option {
 
 /*no mostrar objeto*/
 .nv {
-    /* left: 360px;
+    left: 360px;
     visibility: hidden !important;
-    transition-timing-function: linear; */
+    transition-timing-function: linear;
     /*-webkit-transition: all .5s;*/
-    display: none;
 }
 
 .ver {
-    /* left: 0px;
+    left: 0px;
     visibility: visible !important;
-    transition-timing-function: linear; */
+    transition-timing-function: linear;
     /*-webkit-transition: all .5s;*/
-    display: block;
 }
 
 .no{
@@ -932,6 +930,10 @@ input#contra{
     float: left;
     position: relative;
     /*background: green;*/
+}
+
+#esta{
+    margin-bottom: 3px;
 }
 
 
